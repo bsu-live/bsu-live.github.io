@@ -1,0 +1,502 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "HeadingFont", "ParaFont";
+  --color1: #fff;
+  --color2: #132a45;
+}
+//scss code for fonts
+//drag and drop the font file in the drive
+@font-face {
+  font-family: "HeadingFont";
+  src: url("/resources/League_Spartan,Montserrat/League_Spartan/static/LeagueSpartan-Medium.ttf"); /* Locate the .ttf file within your directory*/
+}
+
+@mixin breakpoint($max-width) {
+  @media screen and (max-width: $max-width) {
+    @content;
+  }
+}
+
+@font-face {
+  font-family: "ParaFont";
+  src: url("/resources/League_Spartan,Montserrat/Montserrat/static/Montserrat-Medium.ttf");
+}
+
+//use mixin to apply font styles
+@mixin headerFontstyle {
+  font-family: "HeadingFont";
+  font-size: 32pt;
+}
+
+@mixin paraFontstyle {
+  font-family: "ParaFont";
+  font-size: 12pt;
+  line-height: 1.7em;
+}
+
+//scss for colors
+$colors: #7f2347, #cedcee, #5682ab, #355172, #32383c,
+  //colors of WHY CHOOSE US cards
+  #7a428d,
+  #d5bf4d, #d9d9d9, #d9d9d9, #f8fbf8;
+
+.logo {
+  margin: 1%;
+  @include breakpoint(1367px) {
+    margin-top: -1px;
+    margin-left: -7px;
+  }
+}
+h1 {
+  @include headerFontstyle();
+}
+p {
+  @include paraFontstyle();
+}
+a:hover {
+  text-decoration: underline;
+}
+a {
+  text-decoration: none;
+}
+a:visited,
+a:link {
+  color: #660033;
+}
+.card-body img {
+  width: 25%;
+  height: auto;
+}
+.browse_more_button {
+  background-color: #7f2347; /* Dark maroon color */
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+nav {
+  @include breakpoint(1367px) {
+    //position: fixed;
+    top: 0;
+    z-index: 1;
+  }
+}
+.nav-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  position: absolute;
+  padding: 1px 10px;
+  z-index: 1;
+}
+.nav-bar li a {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  color: #000;
+}
+.nav-bar li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.5s;
+}
+
+.nav-bar li a:hover {
+  color: #2ae0e6;
+  //transform: scale(1.1);
+  animation: underline 0.3s forwards;
+}
+.logo img {
+  width: 17%;
+}
+.menu {
+  display: flex;
+}
+.menu li {
+  padding-left: 10px;
+}
+.menu li a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--color1);
+  text-align: center;
+  transition: 0.15s ease-in-out;
+  position: relative;
+  text-transform: uppercase;
+}
+.menu li a::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color1);
+  transition: 0.15s ease-in-out;
+}
+.menu li a:hover:after {
+  width: 100%;
+}
+.open-menu,
+.close-menu {
+  position: absolute;
+  color: var(--color1);
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: none;
+}
+.open-menu {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+.close-menu {
+  top: 20px;
+  right: 20px;
+}
+#check {
+  display: none;
+}
+.fa-bars:before {
+  content: "\f0c9";
+  color: grey;
+  position: fixed;
+  margin-top: -80px;
+  right: -1px;
+  @include breakpoint(1367px) {
+    margin-top: -30px;
+    right: -1px;
+  }
+}
+.menu {
+  flex-direction: column;
+  align-items: end;
+  padding-right: 20px;
+  justify-content: center;
+  width: 25%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  z-index: 100;
+  background-color: var(--color2);
+  transition: all 0.2s ease-in-out;
+}
+.menu li {
+  margin-top: 40px;
+}
+.menu li a {
+  padding: 5px;
+  margin: -5%;
+}
+.open-menu,
+.close-menu {
+  display: block;
+}
+#check:checked ~ .menu {
+  right: 0;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 5px;
+  font-size: large;
+  width: 130px;
+  background: none;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  border-bottom: solid 1px grey;
+  &::placeholder {
+    color: white;
+    opacity: 50%;
+    text-align: right;
+  }
+}
+
+.search-form {
+  margin-top: 10px;
+}
+.nav-bar input {
+  color: black;
+}
+.apply-btn {
+  background-color: #660033;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 3px;
+  text-decoration: none;
+}
+.search-form {
+  margin-top: 10px;
+}
+
+.apply-btn {
+  margin-top: 10px;
+}
+.video-container video {
+  width: 100%;
+  object-fit: cover;
+  top: -270px;
+  position: relative;
+  //z-index: 1;
+  filter: brightness(0.7);
+}
+
+.headings {
+ 
+  text-align: center;
+}
+.main-content > div {
+  width: 100%;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-left: 4%;
+  margin-top: -18%;
+  padding-bottom: 50px;
+}
+
+.uk-navbar-nav {
+  justify-content: center;
+  font-family: "Catamaran", sans-serif;
+  gap: 15px;
+  display: flex;
+  margin-bottom: 35px;
+  list-style: none;
+  padding: 0;
+}
+
+.uk-navbar-nav > li {
+  min-width: 100px;
+}
+.one {
+    display: flex;
+    justify-content: space-between;
+    margin: 10%;
+}
+
+.uk-navbar-nav > li > a {
+  padding: 15px 35px;
+  display: block;
+  color: #222;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.uk-navbar-nav > li > a:hover,
+.uk-navbar-nav > li.uk-active > a {
+  color: #04286c;
+}
+
+.img-gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.img-gallery-container > li {
+  position: relative;
+  padding: 10px;
+  flex: 1 1 calc(25% - 20px);
+  box-sizing: border-box;
+}
+
+.img-gal {
+  height: 415px;
+  width: 100%;
+  object-fit: cover;
+  transition: 0.5s all ease-in-out;
+  border-radius: 6px;
+}
+
+.img-gallery-container > li:hover > img {
+  filter: brightness(0.4) blur(3px);
+}
+
+.float-gallery-content {
+  position: absolute;
+  width: 90%;
+  z-index: -1;
+  background: #fff;
+  padding: 0;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s all ease-in-out;
+  overflow: hidden;
+}
+
+.img-gallery-container > li:hover .float-gallery-content {
+  bottom: 20px;
+  opacity: 1;
+  visibility: visible;
+  z-index: 9;
+}
+
+.uk-block {
+  display: block;
+}
+
+.float-gallery-content .content {
+  padding: 8px 15px;
+}
+
+.float-gallery-content .content > a {
+  color: #212121;
+  position: relative;
+  bottom: -50px;
+  opacity: 0;
+  transition: all 0.5s;
+  text-decoration: none;
+}
+
+.float-gallery-content .content > a:hover {
+  color: #7b68ee;
+}
+
+button {
+  border: 0;
+  height: 100%;
+  padding: 5px 15px;
+  background: #7b68ee;
+  font-size: 30px;
+  color: #fff;
+  position: relative;
+  right: -100px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.highlight {
+  color: #7b68ee;
+  font-weight: 600;
+  position: relative;
+  left: -100px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.img-gallery-container > li:hover .highlight {
+  left: 0;
+  opacity: 1;
+  transition-delay: 0.1s;
+}
+
+.img-gallery-container > li:hover button {
+  right: 0;
+  opacity: 1;
+  transition-delay: 0.1s;
+}
+
+.img-gallery-container > li:hover .content > a {
+  bottom: 0;
+  opacity: 1;
+  transition-delay: 0.1s;
+}
+
+@media screen and (max-width: 1100px) {
+  .img-gallery-container > li {
+    flex: 1 1 calc(33.33% - 20px);
+  }
+
+  .img-gal {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .img-gallery-container > li {
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  .img-gal {
+    height: 225px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .img-gallery-container > li {
+    flex: 1 1 calc(100% - 20px);
+  }
+
+  .img-gal {
+    height: 125px;
+  }
+}
+
+.container-footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px;
+  background-color: #dbdddc;
+}
+
+.logo1 {
+  text-align: center;
+}
+
+.logo1 img {
+  max-width: 100px;
+}
+
+.explore,
+.links {
+  text-align: left;
+}
+
+h3 {
+  color: #822e50;
+  @include headerFontstyle();
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+a {
+  text-decoration: none;
+  color: #660033;
+  font-size: 16px;
+}
+
+a:hover {
+  text-decoration: underline;
+}

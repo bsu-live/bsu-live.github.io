@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BSU Website</title>
+    <link rel="stylesheet" href="/CSS/student/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.6.22/css/uikit.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <ul class="nav-bar">
+        <li class="logo">
+          <a href="#"><img src="/resources/bsu logo.png" width="100%" /></a>
+        </li>
+        <input type="checkbox" id="check" />
+        <span class="menu">
+          <li>
+            <form class="search-form">
+              <input type="text" placeholder="SEARCH" class="search-input" />
+            </form>
+          </li>
+          <li><a href="/PAGES/index.html">HOME</a></li>
+          <li><a href="/PAGES/about_us.html">ABOUT US</a></li>
+          <li><a href="#">PROGRAMMES</a></li>
+          <li><a href="/PAGES/student.html">Our STUDENTS</a></li>
+          <li><a href="/PAGES/our staff.html">OUR STAFF</a></li>
+          <li><a href="/PAGES/our alumni.html">OUR ALUMNI</a></li>
+          <li><a href="#">SCHOLARSHIP</a></li>
+          <li><a href="/PAGES/news.html">NEWS AND EVENTS</a></li>
+          <li><a href="#" class="apply-btn">Apply Now</a></li>
+          <label for="check" class="close-menu"
+            ><i class="fas fa-times"></i
+          ></label>
+        </span>
+        <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+      </ul>
+    </nav>
+    <main>
+      <div class="video-container">
+        <video autoplay muted loop>
+          <source src="/resources/bsu intro.mp4" />
+        </video>
+      </div>
+    </main>
+    <div class="main-content">
+      <div uk-filter="target: .js-filter">
+        <ul class="uk-navbar-nav">
+          <li class="uk-active" uk-filter-control><a href="#">ALL</a></li>
+          <li uk-filter-control="[data-num='1']">
+            <a href="#">School of Business and Management</a>
+          </li>
+          <li uk-filter-control="[data-num='2']">
+            <a href="#">School of Computing & Media</a>
+          </li>
+          <li uk-filter-control="[data-num='3']">
+            <a href="#">School of Psychology</a>
+          </li>
+        </ul>
+        <ul
+          class="img-gallery-container js-filter uk-child-width-1-2 uk-child-width-1-3@m uk-text-center"
+          uk-grid
+        >
+          <li data-num="1">
+            <img src="/resources/student1.jpg" alt="" class="img-gal" />
+            <div class="float-gallery-content">
+              <div class="content uk-text-left">
+                <span class="highlight uk-block">Laim Noah</span>
+                <a href="#">School of B-Management</a>
+              </div>
+              <div class="content-btn">
+                <button type="button">&#8594;</button>
+              </div>
+            </div>
+          </li>
+          <li data-num="2">
+            <img src="/resources/student2.jpg" alt="" class="img-gal" />
+            <div class="float-gallery-content">
+              <div class="content uk-text-left">
+                <span class="highlight uk-block">Olivia Emma</span>
+                <a href="#">Computer and media </a>
+              </div>
+              <div class="content-btn">
+                <button type="button">&#8594;</button>
+              </div>
+            </div>
+          </li>
+          <li data-num="3">
+            <img src="/resources/student3.jpg" alt="" class="img-gal" />
+            <div class="float-gallery-content">
+              <div class="content uk-text-left">
+                <span class="highlight uk-block">Charlotte Amelia</span>
+                <a href="#">School of Psychology</a>
+              </div>
+              <div class="content-btn">
+                <button type="button">&#8594;</button>
+              </div>
+            </div>
+          </li>
+          <li data-num="1">
+            <img src="/resources/student4.jpg" alt="" class="img-gal" />
+            <div class="float-gallery-content">
+              <div class="content uk-text-left">
+                <span class="highlight uk-block">James Elijah</span>
+                <a href="#">School of B-Management</a>
+              </div>
+              <div class="content-btn">
+                <button type="button">&#8594;</button>
+              </div>
+            </div>
+          </li>
+          <li data-num="2">
+            <img src="/resources/student5.jpg" alt="" class="img-gal" />
+            <div class="float-gallery-content">
+              <div class="content uk-text-left">
+                <span class="highlight uk-block">William Henry</span>
+                <a href="#">Computer and media</a>
+              </div>
+              <div class="content-btn">
+                <button type="button">&#8594;</button>
+              </div>
+            </div>
+          </li>
+          <li data-num="3">
+            <img src="/resources/student6.jpg" alt="" class="img-gal" />
+            <div class="float-gallery-content">
+              <div class="content uk-text-left">
+                <span class="highlight uk-block">Sophia Isabella</span>
+                <a href="#">School of Psychology</a>
+              </div>
+              <div class="content-btn">
+                <button type="button">&#8594;</button>
+              </div>
+            </div>
+          </li>
+          <li data-num="1">
+            <img src="/resources/student7.jpg" alt="" class="img-gal" />
+            <div class="float-gallery-content">
+              <div class="content uk-text-left">
+                <span class="highlight uk-block">Benjamin Theodore</span>
+                <a href="#">School of B-Management</a>
+              </div>
+              <div class="content-btn">
+                <button type="button">&#8594;</button>
+              </div>
+            </div>
+          </li>
+          <li data-num="2">
+            <img src="/resources/student8.jpg" alt="" class="img-gal" />
+            <div class="float-gallery-content">
+              <div class="content uk-text-left">
+                <span class="highlight uk-block">Mateo Levi</span>
+                <a href="#">Computer and media</a>
+              </div>
+              <div class="content-btn">
+                <button type="button">&#8594;</button>
+              </div>
+            </div>
+          </li>
+          <li data-num="3">
+            <img src="/resources/student9.jpg" alt="" class="img-gal" />
+            <div class="float-gallery-content">
+              <div class="content uk-text-left">
+                <span class="highlight uk-block">Sebastian</span>
+                <a href="#">School of Psychology</a>
+              </div>
+              <div class="content-btn">
+                <button type="button">&#8594;</button>
+              </div>
+            </div>
+          </li>
+          <li data-num="1">
+            <img src="/resources/student10.jpg" alt="" class="img-gal" />
+            <div class="float-gallery-content">
+              <div class="content uk-text-left">
+                <span class="highlight uk-block">Elizabeth</span>
+                <a href="#">School of B-Management</a>
+              </div>
+              <div class="content-btn">
+                <button type="button">&#8594;</button>
+              </div>
+            </div>
+          </li>
+          <li data-num="2">
+            <img src="/resources/student11.jpg" alt="" class="img-gal" />
+            <div class="float-gallery-content">
+              <div class="content uk-text-left">
+                <span class="highlight uk-block">Eleanor</span>
+                <a href="#">Computer and media</a>
+              </div>
+              <div class="content-btn">
+                <button type="button">&#8594;</button>
+              </div>
+            </div>
+          </li>
+          <li data-num="3">
+            <img src="/resources/student12.jpg" alt="" class="img-gal" />
+            <div class="float-gallery-content">
+              <div class="content uk-text-left">
+                <span class="highlight uk-block">Mila Violet</span>
+                <a href="#">School of Psychology</a>
+              </div>
+              <div class="content-btn">
+                <button type="button">&#8594;</button>
+              </div>
+            </div>
+          </li>
+          <li data-num="1">
+            <img src="/resources/student13.jpg" alt="" class="img-gal" />
+            <div class="float-gallery-content">
+              <div class="content uk-text-left">
+                <span class="highlight uk-block">Daniel</span>
+                <a href="#">School of B-Management</a>
+              </div>
+              <div class="content-btn">
+                <button type="button">&#8594;</button>
+              </div>
+            </div>
+          </li>
+          <li data-num="2">
+            <img src="/resources/student14.jpg" alt="" class="img-gal" />
+            <div class="float-gallery-content">
+              <div class="content uk-text-left">
+                <span class="highlight uk-block">Penelope</span>
+                <a href="#">Computer and media</a>
+              </div>
+              <div class="content-btn">
+                <button type="button">&#8594;</button>
+              </div>
+            </div>
+          </li>
+          <li data-num="3">
+            <img src="/resources/student15.jpg" alt="" class="img-gal" />
+            <div class="float-gallery-content">
+              <div class="content uk-text-left">
+                <span class="highlight uk-block">Gianna</span>
+                <a href="#">School of Psychology</a>
+              </div>
+              <div class="content-btn">
+                <button type="button">&#8594;</button>
+              </div>
+            </div>
+          </li>
+          <li data-num="1">
+            <img src="/resources/student16.jpg" alt="" class="img-gal" />
+            <div class="float-gallery-content">
+              <div class="content uk-text-left">
+                <span class="highlight uk-block">Abigail</span>
+                <a href="#">School of B-Management</a>
+              </div>
+              <div class="content-btn">
+                <button type="button">&#8594;</button>
+              </div>
+            </div>
+          </li>
+          <li data-num="2">
+            <img src="/resources/student17.jpg" alt="" class="img-gal" />
+            <div class="float-gallery-content">
+              <div class="content uk-text-left">
+                <span class="highlight uk-block">Michael</span>
+                <a href="#">Computer and media</a>
+              </div>
+              <div class="content-btn">
+                <button type="button">&#8594;</button>
+              </div>
+            </div>
+          </li>
+          <li data-num="3">
+            <img src="/resources/student18.jpg" alt="" class="img-gal" />
+            <div class="float-gallery-content">
+              <div class="content uk-text-left">
+                <span class="highlight uk-block">Hazel</span>
+                <a href="#">School of Psychology</a>
+              </div>
+              <div class="content-btn">
+                <button type="button">&#8594;</button>
+              </div>
+            </div>
+          </li>
+          <li data-num="1">
+            <img src="/resources/student19.jpg" alt="" class="img-gal" />
+            <div class="float-gallery-content">
+              <div class="content uk-text-left">
+                <span class="highlight uk-block">Nora Aurora</span>
+                <a href="#">School of B-Management</a>
+              </div>
+              <div class="content-btn">
+                <button type="button">&#8594;</button>
+              </div>
+            </div>
+          </li>
+          <li data-num="2">
+            <img src="/resources/student20.jpg" alt="" class="img-gal" />
+            <div class="float-gallery-content">
+              <div class="content uk-text-left">
+                <span class="highlight uk-block">Alexander</span>
+                <a href="#">Computer and media</a>
+              </div>
+              <div class="content-btn">
+                <button type="button">&#8594;</button>
+              </div>
+            </div>
+          </li>
+          <li data-num="3">
+            <img src="/resources/student21.jpg" alt="" class="img-gal" />
+            <div class="float-gallery-content">
+              <div class="content uk-text-left">
+                <span class="highlight uk-block">Samuel</span>
+                <a href="#">School of Psychology</a>
+              </div>
+              <div class="content-btn">
+                <button type="button">&#8594;</button>
+              </div>
+            </div>
+          </li>
+          <li data-num="1">
+            <img src="/resources/student22.jpg" alt="" class="img-gal" />
+            <div class="float-gallery-content">
+              <div class="content uk-text-left">
+                <span class="highlight uk-block">Jackson</span>
+                <a href="#">School of B-Management</a>
+              </div>
+              <div class="content-btn">
+                <button type="button">&#8594;</button>
+              </div>
+            </div>
+          </li>
+          <li data-num="2">
+            <img src="/resources/student23.jpg" alt="" class="img-gal" />
+            <div class="float-gallery-content">
+              <div class="content uk-text-left">
+                <span class="highlight uk-block">Hudson</span>
+                <a href="#">Computer and media</a>
+              </div>
+              <div class="content-btn">
+                <button type="button">&#8594;</button>
+              </div>
+            </div>
+          </li>
+          <li data-num="3">
+            <img src="/resources/student224.jpg" alt="" class="img-gal" />
+            <div class="float-gallery-content">
+              <div class="content uk-text-left">
+                <span class="highlight uk-block">Joseph</span>
+                <a href="#">School of Psychology</a>
+              </div>
+              <div class="content-btn">
+                <button type="button">&#8594;</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container-footer">
+      <div class="logo1">
+        <img src="/resources/BSU LOGO2.jpg" alt="Bath Spa University" />
+      </div>
+      <div class="explore">
+        <ul>
+          <li><a href="#">BA (Hons) Business and Management HRM</a></li>
+          <li>
+            <a href="#">BA (Hons) Business and Management Accounting</a>
+          </li>
+          <li><a href="#">BA (Hons) Business and Management Marketing</a></li>
+          <li>
+            <a href="#">BA (Hons) Business and Management ACCA Integrated</a>
+          </li>
+          <li><a href="#">MA Business and Management</a></li>
+          <li><a href="#">MBA Leadership</a></li>
+        </ul>
+      </div>
+      <div class="links">
+        <ul>
+            <li><a href="/PAGES/index.html">HOME</a></li>
+            <li><a href="/PAGES/about_us.html">ABOUT US</a></li>
+            <li><a href="#">PROGRAMMES</a></li>
+            <li><a href="/PAGES/student.html">Our STUDENTS</a></li>
+            <li><a href="/PAGES/our staff.html">OUR STAFF</a></li>
+            <li><a href="/PAGES/our alumni.html">OUR ALUMNI</a></li>
+            <li><a href="#">SCHOLARSHIP</a></li>
+            <li><a href="/PAGES/news.html">NEWS AND EVENTS</a></li>
+        </ul>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.6.22/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.6.22/js/uikit-icons.min.js"></script>
+    <script src="/Js/main.js"></script>
+  </body>
+</html>

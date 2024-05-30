@@ -1,0 +1,683 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+@mixin breakpoint($max-width) {
+  @media screen and (max-width: $max-width) {
+    @content;
+  }
+} //480px and 1024px
+
+@font-face {
+  font-family: "HeadingFont";
+  src: url("/resources/League_Spartan,Montserrat/League_Spartan/static/LeagueSpartan-Medium.ttf"); /* Locate the .ttf file within your directory*/
+}
+
+@font-face {
+  font-family: "ParaFont";
+  src: url("/resources/League_Spartan,Montserrat/Montserrat/static/Montserrat-Medium.ttf");
+}
+
+@mixin headerFontstyle {
+  font-family: "HeadingFont";
+  font-size: 32pt;
+}
+
+@mixin paraFontstyle {
+  font-family: "ParaFont";
+  font-size: 12pt;
+  line-height: 1.7em;
+}
+
+$colors: #7f2347,
+  //Burgundy
+  #cedcee,
+  #5682ab, #355172, #32383c,
+  //colors of WHY CHOOSE US cards
+  #7a428d,
+  #d5bf4d,
+  //mustard
+  #d9d9d9,
+  #d9d9d9, #f8fbf8;
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  position: absolute;
+  z-index: -10;
+  @include breakpoint(480px) {
+    float: left;
+  }
+}
+.content {
+  display: flex;
+  padding: 5%;
+  margin: 0%;
+  padding-top: 31%;
+  @include breakpoint(1440px) {
+    display: none;
+  }
+  @include breakpoint(480px) {
+    display: block;
+  }
+}
+.content h1 {
+  @include headerFontstyle();
+  position: absolute;
+  @include breakpoint(1440px) {
+    top: 650px;
+  }
+  @include breakpoint(1024px) {
+    top: 500px;
+  }
+  @include breakpoint(480px) {
+    top: 350px;
+  }
+  @include breakpoint(376px) {
+    top: 350px;
+  }
+}
+.search_news {
+  margin: 0 5% 2% 5%;
+  padding: 5px;
+  border: solid black 2px;
+  width: fit-content;
+  @include paraFontstyle();
+  @include breakpoint(1440px) {
+    margin-top: 38%;
+  }
+  @include breakpoint(1024px) {
+    margin-top: 49%;
+  }
+  @include breakpoint(425px) {
+    margin-top: 50%;
+  }
+  @include breakpoint(376px) {
+    margin-top: 90%;
+  }
+}
+section {
+  margin: 0 5% 5% 5%; //top right bottom left
+  h1 {
+    @include headerFontstyle();
+  }
+  p {
+    @include paraFontstyle();
+    text-align: justify;
+  }
+  h3 {
+    font-family: "HeadingFont";
+  }
+  #image1 {
+    width: 100%;
+    height: auto;
+  }
+  #image2 {
+    width: 50%;
+    height: auto;
+    float: left;
+  }
+  #arrow_icon,
+  #eye_icon {
+    width: 10%;
+    height: auto;
+    display: flex;
+    padding: 3% 20%;
+    padding-top: 7%;
+  }
+  #eye_icon {
+    padding-top: 7%;
+  }
+  #vision {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 5% 0 5%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin: 1% 0 2% 0;
+  }
+  #mission {
+    display: flex;
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+    padding: 0 5% 0 5%;
+    margin: 1% 0 2% 0;
+  }
+  #image3 {
+    width: 45%;
+    height: auto;
+    float: right;
+  }
+}
+
+#left_text {
+  margin-top: 15%;
+}
+
+#pillars {
+  padding-top: 50%;
+  h1 {
+    margin-bottom: 5%;
+    @include breakpoint(376px) {
+      font-size: 16pt;
+    }
+  }
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -100px;
+  .card[for="c1"] {
+    h1 {
+      @include headerFontstyle();
+      color: #816955;
+    }
+    p {
+      @include paraFontstyle();
+      font-size: small;
+      color: #816955;
+      @include breakpoint(1025px) {
+        font-size: 7pt;
+      }
+    }
+  }
+  .card[for="c2"] {
+    h1 {
+      @include headerFontstyle();
+      color: #fefaf6;
+    }
+    p {
+      @include paraFontstyle();
+      font-size: small;
+      color: #fefaf6;
+      @include breakpoint(1025px) {
+        font-size: 7pt;
+      }
+    }
+  }
+  .card[for="c3"] {
+    h1 {
+      @include headerFontstyle();
+      color: white;
+    }
+    p {
+      @include paraFontstyle();
+      font-size: small;
+      color: white;
+      @include breakpoint(1025px) {
+        font-size: 7pt;
+      }
+    }
+  }
+  .container {
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+    @include breakpoint(426px) {
+      display: block;
+    }
+  }
+  @include breakpoint(769px) {
+    margin-top: 4%;
+  }
+}
+
+.card {
+  width: 200px;
+  background-size: cover;
+  cursor: pointer;
+  overflow: hidden;
+  margin: 0 4px;
+  align-items: flex-end;
+  transition: 0.6s cubic-bezier(0.28, -0.03, 0, 0.99);
+  .row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+    @include breakpoint(769px) {
+      display: block;
+      padding: 5%;
+    }
+    @include breakpoint(426px) {
+      background-color: #bbb1a4;
+    }
+  }
+  .icon {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 0 0;
+    height: fit-content;
+    padding: 0;
+    img {
+      width: 70%;
+      height: auto;
+      @include breakpoint(1025px) {
+        width: 50%;
+      }
+      @include breakpoint(769px) {
+        width: 35%;
+      }
+    }
+  }
+  .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: auto;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: 0.3s;
+    transition: all 0.3s ease;
+    padding-right: 50px;
+    p {
+      padding-top: 5px;
+    }
+    @include breakpoint(1025px) {
+      margin-top: 15%;
+    }
+    @include breakpoint(321px) {
+      width: 80%;
+    }
+  }
+}
+
+.container {
+  input {
+    display: none;
+  }
+}
+
+input:checked + label {
+  width: 800px;
+  @include breakpoint(1025px) {
+    width: 55%;
+  }
+}
+
+input:checked + label .description {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.card[for="c1"] {
+  background-color: #e7e2da;
+}
+.card[for="c2"] {
+  background-color: #bbb1a4;
+}
+.card[for="c3"] {
+  background-color: #816955;
+}
+
+#news {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 1%;
+  hr {
+    border: 1px solid grey;
+    margin-bottom: 15px;
+  }
+  #right_div,
+  #left_div {
+    @include breakpoint(1024px) {
+      display: block;
+    }
+    align-self: center;
+    .row {
+      padding: 2% 0 2% 2%;
+      img {
+        width: 43%;
+        display: flex;
+        @include breakpoint(1024px) {
+          width: 100%;
+        }
+      }
+      p {
+        width: 50%;
+        float: right;
+        margin-right: 5%;
+        font-size: 15px;
+        line-height: 17px;
+        justify-content: center;
+        @include breakpoint(1024px) {
+          font-size: medium;
+          float: none;
+          width: 100%;
+          line-height: 15px;
+          text-align: left;
+          padding-bottom: 2%;
+        }
+      }
+      &:hover {
+        color: nth($colors, 5);
+        background-color: nth($colors, 8);
+      }
+    }
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    &:visited {
+      text-decoration: none;
+      color: nth($colors, 5);
+    }
+  }
+
+  @include breakpoint(1440px) {
+    grid-template-columns: 50% 50%;
+  }
+  @include breakpoint(480px) {
+    display: block;
+  }
+}
+
+#click {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 1%;
+  #left_img2 img {
+    width: 100%;
+    height: 45%;
+    position: sticky;
+    top: 10px;
+    @include breakpoint(1440px) {
+      height: 50%;
+    }
+    @include breakpoint(769px) {
+      height: 20%;
+    }
+  }
+  #right_div2 {
+    padding: 2%;
+    p {
+      font-size: medium;
+      @include breakpoint(480px) {
+        font-size: small;
+      }
+    }
+  }
+  @include breakpoint(1440px) {
+    margin-top: 40%;
+  }
+  @include breakpoint(426px) {
+    display: block;
+  }
+  @include breakpoint(376px) {
+    margin-top: 80%;
+  }
+}
+
+.nav-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  position: fixed;
+  padding: 1px 10px;
+  z-index: 1;
+}
+.nav-bar li a {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  color: #000;
+}
+.nav-bar li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.5s;
+}
+
+.nav-bar li a:hover {
+  color: #2ae0e6;
+  //transform: scale(1.1);
+  animation: underline 0.3s forwards;
+}
+.logo img {
+  width: 17%;
+  margin: 1%;
+  @include breakpoint(426px) {
+    width: 30%;
+  }
+  @include breakpoint(321px) {
+    width: 45%;
+  }
+}
+.menu {
+  display: flex;
+}
+.menu li {
+  padding-left: 10px;
+}
+.menu li a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  transition: 0.15s ease-in-out;
+  position: relative;
+  text-transform: uppercase;
+  font-family: "HeadingFont";
+}
+.menu li a::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: white;
+  transition: 0.15s ease-in-out;
+}
+.menu li a:hover:after {
+  width: 100%;
+}
+.open-menu,
+.close-menu {
+  position: absolute;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: none;
+}
+.open-menu {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+.close-menu {
+  top: 20px;
+  right: 20px;
+}
+#check {
+  display: none;
+}
+.fa-bars:before {
+  content: "\f0c9";
+  color: grey;
+  position: fixed;
+  margin-top: -85px;
+  right: 15px;
+  @include breakpoint(769px) {
+    margin-top: -60px;
+  }
+  @include breakpoint(376px) {
+    margin-top: -50px;
+  }
+}
+.menu {
+  flex-direction: column;
+  align-items: end;
+  padding-right: 20px;
+  justify-content: center;
+  width: 25%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  z-index: 100;
+  background-color: #132a45;
+  transition: all 0.2s ease-in-out;
+}
+.menu li {
+  margin-top: 40px;
+}
+.menu li a {
+  padding: 5px;
+  margin: -5%;
+}
+
+.open-menu,
+.close-menu {
+  display: block;
+}
+
+#check:checked ~ .menu {
+  right: 0;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 5px;
+  font-size: large;
+  width: 130px;
+  background: none;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  border-bottom: solid 1px grey;
+  &::placeholder {
+    color: white;
+    opacity: 50%;
+    text-align: right;
+  }
+}
+
+.search-form {
+  margin-top: 10px;
+}
+.apply-btn {
+  background-color: #660033;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 3px;
+  text-decoration: none;
+}
+.search-form {
+  margin-top: 10px;
+}
+
+.apply-btn {
+  margin-top: 10px;
+}
+.nav-bar input {
+  color: white;
+}
+
+.left_img_about_us {
+  width: 50%;
+  display: flex;
+  float: left;
+}
+.british_uni {
+  float: left;
+  width: 45%;
+  margin: 2%;
+  p {
+    @include breakpoint(769px) {
+      font-size: 7pt;
+    }
+  }
+  h1 {
+    @include breakpoint(376px) {
+      font-size: 16pt;
+    }
+  }
+}
+.british_uni_sec {
+  margin-top: 35%;
+  @include breakpoint(769px) {
+    margin-top: 50%;
+  }
+  @include breakpoint(426px) {
+    margin-bottom: 350px;
+    padding-bottom: 10px;
+  }
+  @include breakpoint(376px) {
+    margin-top: 60%;
+  }
+  @include breakpoint(321px) {
+    margin-top: 70%;
+  }
+}
+
+.container-footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px;
+  background-color: #dbdddc;
+}
+
+.logo1 {
+  text-align: center;
+}
+
+.logo1 img {
+  max-width: 100px;
+}
+
+.explore,
+.links {
+  text-align: left;
+}
+
+h3 {
+  color: #822e50;
+  @include headerFontstyle();
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+a {
+  text-decoration: none;
+  color: #660033;
+  font-size: 16px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
