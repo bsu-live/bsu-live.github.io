@@ -266,17 +266,26 @@ a:link {
   margin-top: 10px;
 }
 
+.video-container {
+  padding-bottom: 10%;
+}
+
+.top {
+  margin-bottom: 10%;
+  text-align: center;
+  font-weight: 900;
+  font-family: "HeadingFont";
+  font-size: 32pt;
+  font-size: 2.5rem;
+}
+
 .video-container video {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  top: -270px;
+  top: -70px;
   position: relative;
   filter: brightness(0.7);
-}
-
-.headings {
-  text-align: center;
 }
 
 .main-content > div {

@@ -251,19 +251,25 @@ nav {
 .apply-btn {
   margin-top: 10px;
 }
+.video-container {
+  padding-bottom: 10%;
+}
+.top {
+  margin-bottom: 10%;
+  text-align: center;
+  font-weight: 900;
+  @include headerFontstyle();
+  font-size: 2.5rem;
+}
 .video-container video {
   width: 100%;
   object-fit: cover;
-  top: -270px;
+  top: -70px;
   position: relative;
   //z-index: 1;
   filter: brightness(0.7);
 }
 
-.headings {
- 
-  text-align: center;
-}
 .main-content > div {
   width: 100%;
 }
@@ -291,9 +297,9 @@ nav {
   min-width: 100px;
 }
 .one {
-    display: flex;
-    justify-content: space-between;
-    margin: 10%;
+  display: flex;
+  justify-content: space-between;
+  margin: 10%;
 }
 
 .uk-navbar-nav > li > a {
