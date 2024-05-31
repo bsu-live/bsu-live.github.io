@@ -723,6 +723,11 @@ a:link {
   line-height: 1.2;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 1441px) {
+  .SBM h1 {
+    width: 60%;
+  }
+}
 
 .SBM h1 span {
   color: #d5bf4d;

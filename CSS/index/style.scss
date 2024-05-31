@@ -624,6 +624,9 @@ a:link {
   color: #2197bd;
   line-height: 1.2;
   margin-bottom: 20px;
+  @include breakpoint(1441px) {
+    width: 60%;
+  }
 }
 
 .SBM h1 span {

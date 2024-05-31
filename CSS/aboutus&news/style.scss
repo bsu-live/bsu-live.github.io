@@ -88,7 +88,7 @@ $colors: #7f2347,
   width: fit-content;
   @include paraFontstyle();
   @include breakpoint(1440px) {
-    margin-top: 38%;
+    margin-top: 45%;
   }
   @include breakpoint(1024px) {
     margin-top: 49%;
