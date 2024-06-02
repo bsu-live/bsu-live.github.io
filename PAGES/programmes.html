@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BSU Website</title>
+    <link rel="stylesheet" href="/CSS/programmes/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li class="logo">
+          <a href="#"><img src="/resources/bsu logo.png" width="100%" /></a>
+        </li>
+      </ul>
+      <ul class="nav-bar">
+        <input type="checkbox" id="check" />
+        <span class="menu">
+          <li>
+            <form class="search-form">
+              <input type="text" placeholder="SEARCH" class="search-input" />
+            </form>
+          </li>
+          <li><a href="/index.html">HOME</a></li>
+          <li><a href="/PAGES/about_us.html">ABOUT US</a></li>
+          <li><a href="/PAGES/programmes.html">PROGRAMMES</a></li>
+          <li><a href="/PAGES/student.html">Our STUDENTS</a></li>
+          <li><a href="/PAGES/our staff.html">OUR STAFF</a></li>
+          <li><a href="/PAGES/our alumni.html">OUR ALUMNI</a></li>
+          <li><a href="#">SCHOLARSHIP</a></li>
+          <li><a href="/PAGES/news.html">NEWS AND EVENTS</a></li>
+          <li><a href="#" class="apply-btn">Apply Now</a></li>
+          <label for="check" class="close-menu"
+            ><i class="fas fa-times"></i
+          ></label>
+        </span>
+        <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+      </ul>
+    </nav>
+    <main>
+      <div class="video-container">
+        <video autoplay muted loop>
+          <source src="/resources/programmes intro.mp4" />
+        </video>
+      </div>
+      <div class="top-heading">
+        <h1>BSU (HONS) <br />CREATIVE <br />COMPUTING</h1>
+      </div>
+    </main>
+    <div class="container3">
+      <div class="info">
+        <div class="info-item">
+          <i class="fa-solid fa-calendar"></i>
+          <p class="label">DELIVERY TYPE</p>
+          <p class="value">Day</p>
+        </div>
+        <div class="info-item">
+          <i class="fa-solid fa-clock"></i>
+          <p class="label">DURATION</p>
+          <p class="value">3 years</p>
+        </div>
+        <div class="info-item">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <p class="label">INTAKE</p>
+          <p class="value">September</p>
+        </div>
+      </div>
+      <div class="image">
+        <img src="/resources/teachers.png" alt="Program" />
+      </div>
+    </div>
+    <div class="program-overview">
+      <div class="overview-image">
+        <img src="/resources/4.png" alt="Program" />
+      </div>
+      <div class="overview-text">
+        <h2>PROGRAM OVERVIEW</h2>
+        <p>
+          This course celebrates digital creativity. We teach you broad
+          computing and design skills, from smartphone app building to VR game
+          development and beyond. You will learn your craft from the ground up,
+          through a mix of workshops, tech demos, creative problem solving
+          challenges, and collaborative briefs. We believe that in this field
+          you will learn best by making, so you can look forward to creating
+          digital work from day one.
+        </p>
+      </div>
+    </div>
+    <div class="program-overview1">
+      <div class="overview-text1">
+        <h2>COURSE ASSESSMENT</h2>
+        <p>
+          Creative Computing is almost entirely coursework-assessed. You will
+          deliver a varied and balanced collection of artefacts including
+          prototype software, experiment portfolios, digital interfaces,
+          interactive stories and web apps. Project work is supported by
+          contextual essays, reflective commentaries, sketchbooks, reports,
+          pitches, presentations, debates and b/vlogs.
+        </p>
+      </div>
+      <div class="overview-image1">
+        <img src="/resources/1.png" alt="Program" />
+      </div>
+    </div>
+    <div class="program-overview3">
+      <div class="overview-image3">
+        <img src="/resources/3.png" alt="Program" />
+      </div>
+      <div class="overview-text3">
+        <h2>TEACHING METHOD</h2>
+        <p>
+          You will be taught through creative workshops, technical labs,
+          seminars and project drop-ins. These sessions are supported by
+          individual and team tutorials throughout your degree programme.
+          CodeLab modules are delivered in small groups. This provides the tutor
+          contact time you need to learn computer programming effectively. A
+          network of visiting speakers and mentors keep you in touch with
+          developments in the tech/creative sectors, while a team of technical
+          demonstrators reinforce the ‘skills training’ aspects of your
+          learning.
+        </p>
+      </div>
+    </div>
+    <div class="COURSE-STRUCTURE">
+      <h1>COURSE STRUCTURE</h1>
+      <hr />
+    </div>
+    <div class="program-details">
+      <div class="details-text">
+        <h2>First Year (Level 4)</h2>
+        <p>
+          Master the basics of computing and digital creativity. Start your
+          journey through Creative Computing by developing key skills in
+          computing and digital design. We provide an induction to computer
+          science (binary, hardware, operating systems, networking) and probe
+          the social and ethical consequences that are distinct to the digital
+          age.
+        </p>
+      </div>
+      <div class="details-semesters">
+        <div class="semester">
+          <h3 class="semester-title" onclick="toggleSemester('semester1')">
+            Semester 1 <span>&#9650;</span>
+          </h3>
+          <ul id="semester1" class="semester-content">
+            <li>Digital Visual Design</li>
+            <li>Digital Storytelling</li>
+            <li>Code Lab I</li>
+          </ul>
+        </div>
+        <hr />
+        <div class="semester">
+          <h3 class="semester-title" onclick="toggleSemester('semester2')">
+            Semester 2 <span>&#9660;</span>
+          </h3>
+          <ul id="semester2" class="semester-content" style="display: none">
+            <li>Creative Coding</li>
+            <li>Web Dev I</li>
+            <li>Ideation & UX Design</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="program-details">
+      <div class="details-text">
+        <h2>Second Year (Level 5)</h2>
+        <p>
+          Enhance your digital skill sets. Core module, Code-lab II introduces
+          the C family of programming languages. We introduce agile
+          methodologies of production and teach you how to deploy event
+          listeners and Application Programming Interfaces (APIs) to create
+          interactive, data driven programs.
+        </p>
+      </div>
+      <div class="details-semesters">
+        <div class="semester">
+          <h3 class="semester-title" onclick="toggleSemester('semester1')">
+            Semester 1 <span>&#9650;</span>
+          </h3>
+          <ul id="semester1" class="semester-content">
+            <li>Code Lab II</li>
+            <li>Web Dev II</li>
+            <li>Indie Game Design</li>
+          </ul>
+        </div>
+        <hr />
+        <div class="semester">
+          <h3 class="semester-title" onclick="toggleSemester('semester2')">
+            Semester 2 <span>&#9660;</span>
+          </h3>
+          <ul id="semester2" class="semester-content" style="display: none">
+            <li>Emerging Technologies</li>
+            <li>Creative Industry Challenge</li>
+            <li>Smart Phone Apps</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="program-details">
+      <div class="details-text">
+        <h2>Third Year (Level 6)</h2>
+        <p>
+          Kick-start your career. You will enhance your software development
+          knowledge while setting yourself up for success in the tech / creative
+          industries. One third of your time is spent developing a significant
+          digital artifact. This work becomes the centerpiece of a compelling,
+          industry-focused creative portfolio.
+        </p>
+      </div>
+      <div class="details-semesters">
+        <div class="semester">
+          <h3 class="semester-title" onclick="toggleSemester('semester1')">
+            Semester 1 <span>&#9650;</span>
+          </h3>
+          <ul id="semester1" class="semester-content">
+            <li>Research Project</li>
+            <li>Cyber Security</li>
+            <li>Machine Learning</li>
+          </ul>
+        </div>
+        <hr />
+        <div class="semester">
+          <h3 class="semester-title" onclick="toggleSemester('semester2')">
+            Semester 2 <span>&#9660;</span>
+          </h3>
+          <ul id="semester2" class="semester-content" style="display: none">
+            <li>Creative Incubator</li>
+            <li>Tomorrow’s Web</li>
+            <li>Physical Computing</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="container5">
+      <div class="image-section5">
+        <img src="/resources/2.png" alt="Graduate" />
+      </div>
+      <div class="content-section5">
+        <h1>APPLY FOR OUR SCHOLARSHIP PROGRAMMES</h1>
+        <p>
+          Bath Spa University Academic Centre RAK acknowledges the academic
+          achievements and talents of students who aspire to join us. We support
+          students who are financially challenged but deserving with our range
+          of scholarship programme assistance: Merit Scholarship, Need-based
+          Scholarship, Competitive Scholarship Test, and Sports Scholarship.
+        </p>
+        <button class="apply-button5">APPLY</button>
+      </div>
+    </div>
+    <hr />
+    <div class="you-might"><h1>YOU MIGHT BE INTERESTED IN</h1></div>
+    <div class="container6">
+      <div class="left-section">
+        <h1>YOU MIGHT BE INTERESTED IN</h1>
+        <div class="info-box1">
+          <div class="info-item1">
+            <img src="/resources/5.png" alt="Semester & Assessment Info" />
+            <p>Semester & Assessment Info</p>
+          </div>
+          <div class="info-item1">
+            <img src="/resources/6.png" alt="Entry Requirements" />
+            <p>Entry Requirements</p>
+          </div>
+          <div class="info-item1">
+            <img src="/resources/7.png" alt="Programme Document" />
+            <p>Programme Document</p>
+          </div>
+          <div class="info-item1">
+            <img src="/resources/5.png" alt="CC Portfolio" />
+            <p>CC Portfolio</p>
+          </div>
+        </div>
+      </div>
+      <div class="right-section">
+        <div class="toggle-item">
+          <div
+            class="toggle-header"
+            onclick="toggleContent('entry-requirements')"
+          >
+            <h2>ENTRY REQUIREMENTS</h2>
+            <span>+</span>
+          </div>
+          <div id="entry-requirements" class="toggle-content">
+            <p>
+              Learn more about the relevant information you need about your
+              programme
+            </p>
+          </div>
+        </div>
+        <div class="toggle-item">
+          <div class="toggle-header" onclick="toggleContent('view-courses')">
+            <h2>VIEW OUR COURSES</h2>
+            <span>+</span>
+          </div>
+          <div id="view-courses" class="toggle-content">
+            <p>Details about various courses available.</p>
+          </div>
+        </div>
+        <div class="toggle-item">
+          <div
+            class="toggle-header"
+            onclick="toggleContent('academic-calendar')"
+          >
+            <h2>ACADEMIC CALENDAR</h2>
+            <span>+</span>
+          </div>
+          <div id="academic-calendar" class="toggle-content">
+            <p>Important dates and events.</p>
+          </div>
+        </div>
+        <div class="toggle-item">
+          <div
+            class="toggle-header"
+            onclick="toggleContent('academic-policies')"
+          >
+            <h2>ACADEMIC POLICIES</h2>
+            <span>+</span>
+          </div>
+          <div id="academic-policies" class="toggle-content">
+            <p>Policies and guidelines.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-footer">
+      <div class="logo1">
+        <img src="/resources/BSU LOGO2.jpg" alt="Bath Spa University" />
+      </div>
+      <div class="explore">
+        <ul>
+          <li><a href="#">BA (Hons) Business and Management HRM</a></li>
+          <li>
+            <a href="#">BA (Hons) Business and Management Accounting</a>
+          </li>
+          <li><a href="#">BA (Hons) Business and Management Marketing</a></li>
+          <li>
+            <a href="#">BA (Hons) Business and Management ACCA Integrated</a>
+          </li>
+          <li><a href="#">MA Business and Management</a></li>
+          <li><a href="#">MBA Leadership</a></li>
+        </ul>
+      </div>
+      <div class="links">
+        <ul>
+          <li><a href="/index.html">HOME</a></li>
+          <li><a href="/PAGES/about_us.html">ABOUT US</a></li>
+          <li><a href="/PAGES/programmes.html">PROGRAMMES</a></li>
+          <li><a href="/PAGES/student.html">Our STUDENTS</a></li>
+          <li><a href="/PAGES/our staff.html">OUR STAFF</a></li>
+          <li><a href="/PAGES/our alumni.html">OUR ALUMNI</a></li>
+          <li><a href="#">SCHOLARSHIP</a></li>
+          <li><a href="/PAGES/news.html">NEWS AND EVENTS</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="/Js/main.js"></script>
+  </body>
+</html>
