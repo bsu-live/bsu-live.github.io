@@ -159,3 +159,24 @@ $(".sendButton").click(function () {
   }, 5000);
   return false;
 });
+
+function toggleSemester(className) {
+  // Get the specific content elements for the given className
+  var specificContents = document.getElementsByClassName(className);
+  for (var j = 0; j < specificContents.length; j++) {
+    var specificContent = specificContents[j];
+    var isOpen = specificContent.style.display === "block";
+    specificContent.style.display = isOpen ? "none" : "block";
+    var icon = specificContent.previousElementSibling.querySelector("span");
+    icon.innerHTML = isOpen ? "&#9660;" : "&#9650;";
+  }
+}
+
+function toggleContent(id) {
+  const content = document.getElementById(id);
+  if (content.style.display === "none" || content.style.display === "") {
+    content.style.display = "block";
+  } else {
+    content.style.display = "none";
+  }
+}
